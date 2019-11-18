@@ -42,4 +42,143 @@
             <url>https://repo.jenkins-ci.org/public/</url>
         </pluginRepository>
     </pluginRepositories>
+
+    <dependencyManagement>
+        <dependencies>
+	  <dependency>
+            <groupId>org.ow2.asm</groupId>
+            <artifactId>asm</artifactId>
+            <version>5.0.4</version>
+	  </dependency>
+	  <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.7</version>
+	  </dependency>
+	  <dependency>
+            <groupId>org.jenkins-ci.plugins</groupId>
+            <artifactId>junit</artifactId>
+            <version>1.3</version>
+	  </dependency>
+	  <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-all</artifactId>
+            <version>2.4.12</version>
+	  </dependency>
+	  <dependency>
+            <groupId>org.jenkins-ci.plugins</groupId>
+            <artifactId>mailer</artifactId>
+            <version>1.20</version>
+	  </dependency>
+	  <dependency>
+            <groupId>org.jenkins-ci.plugins</groupId>
+            <artifactId>script-security</artifactId>
+            <version>1.54</version>
+	  </dependency>
+	  <dependency>
+	    <groupId>org.jenkins-ci.plugins</groupId>
+	    <artifactId>scm-api</artifactId>
+	    <version>2.6.3</version>
+	  </dependency>
+	  <dependency>
+	    <groupId>org.jenkins-ci.plugins.workflow</groupId>
+	    <artifactId>workflow-scm-step</artifactId>
+	    <version>2.7</version>
+	  </dependency>
+	  <dependency>
+            <groupId>org.jenkins-ci.plugins</groupId>
+            <artifactId>structs</artifactId>
+            <version>1.19</version>
+	  </dependency>
+	  <dependency>
+            <groupId>org.jenkins-ci</groupId>
+            <artifactId>symbol-annotation</artifactId>
+            <version>1.19</version>
+	  </dependency>
+
+          <dependency>
+	    <groupId>org.jenkins-ci.plugins.workflow</groupId>
+	    <artifactId>workflow-step-api</artifactId>
+	    <version>2.20</version>
+	  </dependency>
+	  <dependency>
+	    <groupId>org.jenkins-ci.plugins</groupId>
+	    <artifactId>git-client</artifactId>
+	    <version>2.7.7</version>
+          </dependency>
+	
+        </dependencies>
+    </dependencyManagement>
+    <dependencies>
+        <!--plugins for hpi:test, hpi:run-->
+        <dependency>
+            <groupId>org.jenkins-ci.plugins.workflow</groupId>
+            <artifactId>workflow-aggregator</artifactId>
+            <version>2.6</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jenkins-ci.plugins</groupId>
+            <artifactId>support-core</artifactId>
+            <version>2.50</version>
+            <scope>test</scope>
+        </dependency>
+
+	
+        <dependency>
+          <groupId>io.jenkins</groupId>
+          <artifactId>configuration-as-code</artifactId>
+          <version>1.32</version>
+          <scope>test</scope>
+        </dependency>
+	<!-- <dependency> -->
+	<!--   <groupId>org.jenkins-ci.plugins</groupId> -->
+	<!--   <artifactId>plugin</artifactId> -->
+	<!--   <version>3.50</version> -->
+        <!-- </dependency> -->
+	<dependency>
+	  <groupId>org.jenkins-ci.plugins</groupId>
+	  <artifactId>git</artifactId>
+	  <version>3.12.1</version>
+          <scope>test</scope>
+	</dependency>
+	<dependency>
+	  <groupId>org.jenkins-ci.plugins</groupId>
+	  <artifactId>config-file-provider</artifactId>
+	  <version>3.6.2</version>
+          <scope>test</scope>
+	</dependency>
+	<dependency>
+	  <groupId>org.jenkins-ci.plugins</groupId>
+	  <artifactId>credentials</artifactId>
+	  <version>2.3.0</version>
+          <scope>test</scope>
+	</dependency>
+	<dependency>
+	  <groupId>org.jenkins-ci.plugins</groupId>
+	  <artifactId>generic-webhook-trigger</artifactId>
+	  <version>1.63</version>
+          <scope>test</scope>
+	</dependency>
+	<dependency>
+	  <groupId>org.jenkins-ci.plugins</groupId>
+	  <artifactId>jdk-tool</artifactId>
+	  <version>1.3</version>
+          <scope>test</scope>
+	</dependency>
+	<dependency>
+	  <groupId>org.jenkins-ci.plugins</groupId>
+          <artifactId>job-dsl</artifactId>
+          <version>1.76</version>
+          <scope>test</scope>
+	</dependency>
+	<dependency>
+	  <groupId>org.jenkins-ci.plugins</groupId>
+	  <artifactId>plain-credentials</artifactId>
+	  <version>1.5</version>
+          <scope>test</scope>
+
+        </dependency>
+
+    </dependencies>
 </project>
